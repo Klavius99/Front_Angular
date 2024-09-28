@@ -1,0 +1,27 @@
+<!-- Search Bar -->
+<div class="flex-1 flex justify-center px-2 lg:ml-6 lg:justify-center" style="align-self: center;">
+  <div class="max-w-lg w-full lg:max-w-xs">
+      <div class="relative">
+          <!-- Icone de recherche -->
+          <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <svg class="h-5 w-5 text-white cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"/>
+              </svg>
+          </div>
+          <!-- Champ de saisie -->
+          <input id="search" name="search" class="block w-full pl-10 pr-10 py-2 border border-transparent rounded-md leading-5 bg-white bg-opacity-10 text-white placeholder-gray-200 focus:outline-none focus:bg-opacity-30 focus:placeholder-gray-400 focus:ring-0 sm:text-sm" placeholder="Rechercher un article ou un ami" type="search">
+          <!-- Icône pour effacer le texte -->
+          <button type="button" id="clearSearch" class="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-200 cursor-pointer" onclick="clearSearch()">
+              <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M10 9l5.293-5.293a1 1 0 011.414 1.414L11.414 10l5.293 5.293a1 1 0 01-1.414 1.414L10 11.414l-5.293 5.293a1 1 0 01-1.414-1.414L8.586 10 .293 4.707A1 1 0 011.707 3.293L10 9z" clip-rule="evenodd"/>
+              </svg>
+          </button>
+      </div>
+  </div>
+</div>
+
+<script>
+  function clearSearch() {
+      document.getElementById('search').value = ''; // Efface le texte du champ de recherche
+  }
+</script>

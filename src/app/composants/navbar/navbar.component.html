@@ -1,0 +1,72 @@
+<nav class="glassmorphism fixed w-full">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-around h-16">
+        <div class="flex">
+          <!-- Logo -->
+          <div class="flex-shrink-0 flex items-center">
+            <h1 routerLink="/home" style="color: white; cursor: pointer;" >SMART<span style="color:rgb(9, 9, 105)">CODE</span></h1>
+          </div>
+  
+          <!-- Menu items -->
+          <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+            <a routerLink="/dashboard" routerLinkActive="active-link"
+              class="text-white hover:text-white inline-flex items-center px-1 pt-1 text-sm font-medium"
+              [ngClass]="{'border-b-2 border-blue-500': isActive('/dashboard')}">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+              </svg>
+              Tableau de bord
+            </a>
+            
+            <a [routerLink]="['/Amis']" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }"
+              class="text-white hover:text-white inline-flex items-center px-1 pt-1 text-sm font-medium"
+              [ngClass]="{'border-b-2 border-blue-500': isActive('/friends')}">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+              </svg>
+              Amis
+            </a>
+  
+            <a [routerLink]="['/Mes-Articles']" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }"
+              class="text-white hover:text-white inline-flex items-center px-1 pt-1 text-sm font-medium"
+              [ngClass]="{'border-b-2 border-blue-500': isActive('/my-articles')}">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+              </svg>
+              Mes articles
+            </a>
+          </div>
+        </div>
+
+         <!-- Poster un article button -->
+      <button [routerLink]="['/article-form']" class="relative inline-flex items-center bg-transparent text-white font-semibold px-4 py-2 rounded-lg overflow-hidden focus:outline-none hover:shadow-inner hover:shadow-blue-500 transition duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+        </svg>
+        Créer un article
+      </button>
+      
+      
+      
+      
+
+      <!-- Search bar -->
+      <div style="align-self: center">
+        <app-searchbar></app-searchbar>
+      </div>
+
+      <!-- Profile photo and username -->
+      <div class="flex items-center">
+        <div class="flex items-center gap-4">
+          <span class="text-white mr-2">{{username}}</span>
+          <img class="h-8 w-8 rounded-full object-cover" src="https://i.pinimg.com/474x/2d/40/8a/2d408a64b522210ec6d958bc255faf73.jpg" alt="Profile">
+        </div>
+      </div>
+  
+      </div>
+    </div>
+  </nav>
+  

@@ -1,0 +1,19 @@
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+    <div *ngFor="let article of articles" class="bg-gray-800 rounded-lg p-4 shadow-md transition-transform transform hover:scale-105">
+        <h3 class="text-lg font-bold">{{ article.title }}</h3>
+        <p class="text-gray-300">
+            {{ article.content.length > 100 ? (article.content | slice:0:100) + '...' : article.content }}
+        </p>
+        <div class="flex items-center mt-2">
+            <span class="flex items-center text-gray-400 mr-4">
+                <i class="fas fa-thumbs-up"></i> <!-- Icône pour les likes -->
+                <span class="ml-1">{{ article.likes }}</span>
+            </span>
+            <span class="flex items-center text-gray-400">
+                <i class="fas fa-comments"></i> <!-- Icône pour les commentaires -->
+                <span class="ml-1">{{ article.comments }}</span>
+            </span>
+        </div>
+        <button (click)="viewDetails(article.id)" class="mt-2 bg-blue-500 text-white rounded px-4 py-2">Voir Détails</button>
+    </div>
+</div>

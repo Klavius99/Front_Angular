@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Code Blog - Solutions pour Développeurs Web</title>
+  <style>
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+    .floating-card {
+      animation: float 6s ease-in-out infinite;
+    }
+    .full-height {
+      min-height: 100vh;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white">
+  <!-- Navbar -->
+  <nav class="bg-transparent shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex">
+          <!-- Logo -->
+          <div class="flex-shrink-0 flex items-center">
+            <h1 routerLink="/home" style="color: white; cursor: pointer;" >SMART<span style="color:rgb(9, 9, 105)">CODE</span></h1>
+          </div>
+        </div>
+        <div class="flex items-center">
+          <div class="ml-4 flex items-center md:ml-6">
+            <a [routerLink]="['/login']" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Login</a>
+            <a [routerLink]="['/register']" class="ml-4 bg-blue-600 text-white hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium">Register</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="bg-black full-height flex items-center justify-center">
+    <div class="text-center">
+      <h1 class="text-5xl font-extrabold text-white sm:text-6xl md:text-7xl">
+        <span class="block">Trouvez des solutions à vos</span>
+        <span class="block text-blue-400">défis de développement web</span>
+      </h1>
+      <p class="mt-3 max-w-2xl mx-auto text-lg text-gray-300 sm:text-xl md:mt-5 md:text-2xl">
+        Rejoignez la communauté Smart Code Blog pour partager vos expériences, trouver des réponses à vos questions et 
+        découvrir les dernières tendances du développement web.
+      </p>
+      
+    </div>
+  </div>
+
+  <!-- Features Section -->
+  <div class="bg-gray-900 full-height flex items-center justify-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h2 class="text-3xl font-extrabold text-white">Pourquoi choisir Smart Code Blog ?</h2>
+        <p class="mt-4 text-lg text-gray-400">Découvrez les avantages de notre communauté.</p>
+      </div>
+      <div class="mt-20 grid gap-16 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
+        <div class="text-center">
+          <img src="assets/images/community.svg" alt="Community Icon" class="mx-auto w-24 h-24 text-white">
+          <div class="mt-4 text-lg leading-6 font-medium text-white">Communauté Active</div>
+          <div class="mt-2 text-base text-gray-400">
+            Rejoignez une communauté de développeurs web passionnés et partagez vos connaissances.
+          </div>
+        </div>
+        <div class="text-center">
+          <img src="assets/images/knowledge.svg" alt="Knowledge Icon" class="mx-auto w-24 h-24 text-white">
+          <div class="mt-4 text-lg leading-6 font-medium text-white">Connaissance Partagée</div>
+          <div class="mt-2 text-base text-gray-400">
+            Découvrez des articles, tutoriels et solutions à vos problèmes de développement web.
+          </div>
+        </div>
+        <div class="text-center">
+          <img src="assets/images/support.svg" alt="Support Icon" class="mx-auto w-24 h-24 text-white">
+          <div class="mt-4 text-lg leading-6 font-medium text-white">Assistance & Support</div>
+          <div class="mt-2 text-base text-gray-400">
+            Obtenez de l'aide et des conseils d'experts de la communauté.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Articles Section -->
+  <div class="bg-black full-height flex items-center justify-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h2 class="text-3xl font-extrabold text-white">Derniers Articles</h2>
+        <p class="mt-4 text-lg text-gray-400">Découvrez nos articles récents sur le développement web.</p>
+      </div>
+      <div class="mt-20 grid gap-16 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
+        <div class="floating-card bg-gray-700 bg-opacity-30 backdrop-filter backdrop-blur-lg rounded-xl shadow-lg p-6 transition duration-300 ease-in-out transform hover:scale-105">
+          <img src="../../../public/images/ai-generated-9032231_1280.jpg" alt="Article 1" class="rounded-md mb-4">
+          <div class="mt-4 text-lg leading-6 font-medium text-white">Titre de l'article 1</div>
+          <div class="mt-2 text-base text-gray-300">
+            Un bref aperçu de l'article 1. Cliquez pour en savoir plus.
+          </div>
+        </div>
+        <div class="floating-card bg-gray-700 bg-opacity-30 backdrop-filter backdrop-blur-lg rounded-xl shadow-lg p-6 transition duration-300 ease-in-out transform hover:scale-105">
+          <img src="assets/images/article2.jpg" alt="Article 2" class="rounded-md mb-4">
+          <div class="mt-4 text-lg leading-6 font-medium text-white">Titre de l'article 2</div>
+          <div class="mt-2 text-base text-gray-300">
+            Un bref aperçu de l'article 2. Cliquez pour en savoir plus.
+          </div>
+        </div>
+        <div class="floating-card bg-gray-700 bg-opacity-30 backdrop-filter backdrop-blur-lg rounded-xl shadow-lg p-6 transition duration-300 ease-in-out transform hover:scale-105">
+          <img src="assets/images/article3.jpg" alt="Article 3" class="rounded-md mb-4">
+          <div class="mt-4 text-lg leading-6 font-medium text-white">Titre de l'article 3</div>
+          <div class="mt-2 text-base text-gray-300">
+            Un bref aperçu de l'article 3. Cliquez pour en savoir plus.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Team Section -->
+  <div class="bg-gray-900 full-height flex items-center justify-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h2 class="text-3xl font-extrabold text-white">L'équipe Smart Code Blog</h2>
+        <p class="mt-4 text-lg text-gray-400">Découvrez les personnes qui contribuent à faire vivre ce blog.</p>
+      </div>
+      <div class="mt-20 grid gap-16 lg:grid-cols-2 lg:gap-x-8 lg:gap-y-16">
+        <div class="text-center">
+          <img src="assets/images/profile1.jpg" alt="Profile 1" class="rounded-full mx-auto w-32 h-32">
+          <div class="mt-4 text-lg leading-6 font-medium text-white">Nom du Membre 1</div>
+          <div class="mt-2 text-base text-gray-400">
+            Un bref aperçu du membre 1.
+          </div>
+        </div>
+        <div class="text-center">
+          <img src="assets/images/profile2.jpg" alt="Profile 2" class="rounded-full mx-auto w-32 h-32">
+          <div class="mt-4 text-lg leading-6 font-medium text-white">Nom du Membre 2</div>
+          <div class="mt-2 text-base text-gray-400">
+            Un bref aperçu du membre 2.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="bg-black full-height flex items-center justify-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h2 class="text-3xl font-extrabold text-white">Contactez-nous</h2>
+        <p class="mt-4 text-lg text-gray-400">Vous avez des questions ? N'hésitez pas à nous contacter.</p>
+      </div>
+      <div class="mt-12 text-center">
+        <div class="mt-4 text-lg leading-6 font-medium text-white">Email: contact.com</div>
+        <div class="mt-2 text-base text-gray-400">
+          Téléphone: +123 456 7890
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900">
+      <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
+        <div class="mt-8 md:mt-0 md:order-1">
+          <p class="text-base text-gray-400">&copy; 2023 Smart Code Blog. Tous droits réservés.</p>
+        </div>
+        <div class="mt-8 md:mt-0">
+          <a href="https://github.com/your-username/smart-code-blog" target="_blank">
+            <svg class="h-6 w-6 text-gray-400 hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+  </html>
